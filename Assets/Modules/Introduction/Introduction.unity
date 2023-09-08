@@ -271,7 +271,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tmp: {fileID: 166921580}
-  textData: []
+  textData:
+  - language: 0
+    text: 'Consider this system: a <font-weight="700"><color=#FF8E6A>spring</color></font-weight>
+      connecting two identical <font-weight="700"><color=#5BABF1>masses</color></font-weight>,
+      each of which is connected to a fixed <font-weight="700"><color=#808080>wall</color></font-weight>
+      by another <font-weight="700"><color=#83E1B5>spring</color></font-weight>.
+      While the oscillations look rather complex at first, the behavior can be understood
+      in terms of only <i>two basic types of motion</i>.'
+    visibleUI: {fileID: 0}
+  - language: 1
+    text: "Prenons ce syst\xE8me : un <font-weight=\"700\"><color=#FF8E6A>ressort</color></font-weight>
+      reliant deux <font-weight=\"700\"><color=#5BABF1>masses</color></font-weight>
+      identiques, chacune d'entre elles \xE9tant reli\xE9e \xE0 un <font-weight=\"700\"><color=#808080>mur</color></font-weight>
+      fixe par un autre <font-weight=\"700\"><color=#83E1B5>ressort</color></font-weight>.
+      Bien qu'au d\xE9but les oscillations semblent assez complexes, le comportement
+      peut \xEAtre compris en termes de seulement <i>deux types de mouvement de base</i>."
+    visibleUI: {fileID: 0}
 --- !u!114 &166921580
 MonoBehaviour:
   m_ObjectHideFlags: 0
