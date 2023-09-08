@@ -12909,7 +12909,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
   m_AnchoredPosition: {x: -15, y: -6}
-  m_SizeDelta: {x: 56, y: 48}
+  m_SizeDelta: {x: 48, y: 48}
   m_Pivot: {x: 0.5, y: 0}
 --- !u!114 &772935514
 MonoBehaviour:
@@ -12931,7 +12931,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 9144636754f944214adb39658043fe29, type: 3}
+  m_Sprite: {fileID: 21300000, guid: b3584ca7200a24fa89392a6ec394fd3d, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -17149,9 +17149,9 @@ CanvasGroup:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1854051392}
   m_Enabled: 1
-  m_Alpha: 0
-  m_Interactable: 0
-  m_BlocksRaycasts: 0
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0
 --- !u!114 &1872573370 stripped
 MonoBehaviour:
@@ -18178,7 +18178,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 1
-  m_IsOn: 1
+  m_IsOn: 0
 --- !u!114 &878037621250616155
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19719,9 +19719,9 @@ CanvasGroup:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 878037622371039532}
   m_Enabled: 1
-  m_Alpha: 1
-  m_Interactable: 1
-  m_BlocksRaycasts: 1
+  m_Alpha: 0
+  m_Interactable: 0
+  m_BlocksRaycasts: 0
   m_IgnoreParentGroups: 0
 --- !u!114 &878037622380737684
 MonoBehaviour:
@@ -20250,7 +20250,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 1
-  m_IsOn: 0
+  m_IsOn: 1
 --- !u!224 &878037623051006979
 RectTransform:
   m_ObjectHideFlags: 0
@@ -20526,10 +20526,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4832366422438777738}
     m_Modifications:
-    - target: {fileID: 4852161584250708892, guid: 6a1f129935b6f489fb86702340482097, type: 3}
-      propertyPath: m_text
-      value: Drag the masses left and right.
-      objectReference: {fileID: 0}
     - target: {fileID: 4852161584250708894, guid: 6a1f129935b6f489fb86702340482097, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -20549,30 +20545,6 @@ PrefabInstance:
     - target: {fileID: 4852161584250708894, guid: 6a1f129935b6f489fb86702340482097, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4852161584250708895, guid: 6a1f129935b6f489fb86702340482097, type: 3}
-      propertyPath: tmp
-      value: 
-      objectReference: {fileID: 7384377814386491626}
-    - target: {fileID: 4852161584250708895, guid: 6a1f129935b6f489fb86702340482097, type: 3}
-      propertyPath: textData.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 4852161584250708895, guid: 6a1f129935b6f489fb86702340482097, type: 3}
-      propertyPath: textData.Array.data[0].text
-      value: Drag the masses left and right
-      objectReference: {fileID: 0}
-    - target: {fileID: 4852161584250708895, guid: 6a1f129935b6f489fb86702340482097, type: 3}
-      propertyPath: textData.Array.data[1].text
-      value: "Faites glisser les masses \xE0 gauche et \xE0 droite"
-      objectReference: {fileID: 0}
-    - target: {fileID: 4852161584250708895, guid: 6a1f129935b6f489fb86702340482097, type: 3}
-      propertyPath: textData.Array.data[1].language
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4852161584887105400, guid: 6a1f129935b6f489fb86702340482097, type: 3}
-      propertyPath: m_Color.a
-      value: 0.7490196
       objectReference: {fileID: 0}
     - target: {fileID: 4852161584887105402, guid: 6a1f129935b6f489fb86702340482097, type: 3}
       propertyPath: m_Name
@@ -20762,22 +20734,10 @@ PrefabInstance:
       propertyPath: m_SizeDelta.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4852161585145411051, guid: 6a1f129935b6f489fb86702340482097, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: a4d22128bc48543a6b3d9008cb4f3c1c, type: 3}
-    - target: {fileID: 4852161585145411051, guid: 6a1f129935b6f489fb86702340482097, type: 3}
-      propertyPath: m_PixelsPerUnitMultiplier
-      value: 1.8
-      objectReference: {fileID: 0}
     - target: {fileID: 7384377814686070292, guid: 6a1f129935b6f489fb86702340482097, type: 3}
       propertyPath: m_Name
       value: Icon
       objectReference: {fileID: 0}
-    - target: {fileID: 7384377814686070294, guid: 6a1f129935b6f489fb86702340482097, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: 0dcb981c2ceec4de281c39d4b9c37743, type: 3}
     - target: {fileID: 7384377814686070295, guid: 6a1f129935b6f489fb86702340482097, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -20800,17 +20760,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6a1f129935b6f489fb86702340482097, type: 3}
---- !u!114 &7384377814386491626 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 4852161584250708892, guid: 6a1f129935b6f489fb86702340482097, type: 3}
-  m_PrefabInstance: {fileID: 7384377814386491625}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &7431763865778392943
 PrefabInstance:
   m_ObjectHideFlags: 0

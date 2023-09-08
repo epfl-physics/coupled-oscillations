@@ -66,7 +66,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Click on the masses to move them.
+  m_text: Drag the masses left and right.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 0de5a858dbd984e63aa82481dd8d6074, type: 2}
   m_sharedMaterial: {fileID: -5584794868368336635, guid: 0de5a858dbd984e63aa82481dd8d6074, type: 2}
@@ -147,10 +147,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 441d0cd3b15db40fdad9b29a49044185, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  textEN: Click on the masses to move them.
-  textFR: "D\xE9placez les masses en cliquant dessus."
-  transformsEN: {fileID: 0}
-  transformsFR: {fileID: 0}
+  tmp: {fileID: 4852161584250708892}
+  textData:
+  - language: 0
+    text: Drag the masses left and right
+    visibleUI: {fileID: 0}
+  - language: 1
+    text: "Faites glisser les masses \xE0 gauche et \xE0 droite"
+    visibleUI: {fileID: 0}
 --- !u!1 &4852161584887105402
 GameObject:
   m_ObjectHideFlags: 0
@@ -212,7 +216,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.5019608}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.7490196}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -297,8 +301,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a42205f085adf4349ae4f68d9d960d3e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hoverCursor: {fileID: 2800000, guid: e51b8a9ff80cc4ff79a1878bcc7819f8, type: 3}
-  hotspot: {x: 14, y: 6}
+  customCursor: {fileID: 0}
 --- !u!1 &4852161585145411029
 GameObject:
   m_ObjectHideFlags: 0
@@ -368,7 +371,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: c1ad77eec7d734d9bb4eda419adbfe52, type: 3}
+  m_Sprite: {fileID: 21300000, guid: a4d22128bc48543a6b3d9008cb4f3c1c, type: 3}
   m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -377,7 +380,7 @@ MonoBehaviour:
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
+  m_PixelsPerUnitMultiplier: 1.8
 --- !u!114 &4852161585145411031
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -430,7 +433,7 @@ GameObject:
   - component: {fileID: 7384377814686070761}
   - component: {fileID: 7384377814686070294}
   m_Layer: 5
-  m_Name: Image
+  m_Name: Icon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -483,7 +486,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 21a8419d40c504d4e911a7df74fb06da, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 0dcb981c2ceec4de281c39d4b9c37743, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
