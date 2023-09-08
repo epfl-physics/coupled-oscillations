@@ -18,7 +18,7 @@ public class CoupledOscillationsSimulation : Simulation
     [SerializeField] private double x2Ref = 2;
     [SerializeField] private float x1Wall = -5;
     [SerializeField] private float x2Wall = 5;
-    [SerializeField] private SimulationState simState;
+    [SerializeField] private CoupledOscillationsSimulationState simState;
 
     [Header("Interactivity")]
     [SerializeField] private bool massesAreDraggable;
@@ -105,7 +105,7 @@ public class CoupledOscillationsSimulation : Simulation
             {
                 dragMass = hitInfo.transform;
                 dragOffset = hitInfo.point - dragMass.position;
-                resumeOnMouseUp = !paused;
+                resumeOnMouseUp = !IsPaused;
                 Pause();
             }
         }
@@ -159,7 +159,7 @@ public class CoupledOscillationsSimulation : Simulation
     // Solve the equations of motion
     private void FixedUpdate()
     {
-        if (paused) { return; }
+        if (IsPaused) { return; }
 
         int numSubsteps = 10;
         double deltaTime = Time.fixedDeltaTime / numSubsteps;
@@ -336,7 +336,7 @@ public class CoupledOscillationsSimulation : Simulation
             mass1.SetMass(value);
             mass2.SetMass(value);
             UpdateCouplingConstants();
-            if (paused) UpdateSpringPositions();
+            if (IsPaused) UpdateSpringPositions();
             if (startFromRest)
             {
                 UpdateX((float)x[0], (float)x[1]);
@@ -352,7 +352,7 @@ public class CoupledOscillationsSimulation : Simulation
             spring1.k = value;
             spring3.k = value;
             UpdateCouplingConstants();
-            if (paused) UpdateSpringPositions();
+            if (IsPaused) UpdateSpringPositions();
             if (startFromRest)
             {
                 UpdateX((float)x[0], (float)x[1]);
@@ -367,7 +367,7 @@ public class CoupledOscillationsSimulation : Simulation
         {
             spring2.k = value;
             UpdateCouplingConstants();
-            if (paused) UpdateSpringPositions();
+            if (IsPaused) UpdateSpringPositions();
             if (startFromRest)
             {
                 UpdateX((float)x[0], (float)x[1]);

@@ -1,7 +1,7 @@
 using TMPro;
 using UnityEngine;
 
-public class CoupledOscillationsSlideController : SimulationSlideController
+public class CoupledOscillationsSlideController : Slides.SimulationSlideController
 {
     private CoupledOscillationsSimulation sim;
 
