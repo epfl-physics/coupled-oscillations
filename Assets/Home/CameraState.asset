@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1496976945cdc4c96ba23d5031f2ed6c, type: 3}
   m_Name: CameraState
   m_EditorClassIdentifier: 
-  position: {x: 0, y: 0, z: 0}
-  rotation: {x: 0, y: 0, z: 0, w: 0}
-  scale: {x: 0, y: 0, z: 0}
+  position: {x: 0, y: -0.2, z: -13}
+  rotation: {x: 0, y: 0, z: 0, w: 1}
+  scale: {x: 1, y: 1, z: 1}
+  backgroundColor: {r: 1, g: 1, b: 1, a: 1}
