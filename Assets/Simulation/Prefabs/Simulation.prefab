@@ -196,7 +196,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5010281221870562033, guid: c7bbbd33ab91c4901a0360e9ac0fd28a, type: 3}
       propertyPath: numCoils
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 5010281221870562033, guid: c7bbbd33ab91c4901a0360e9ac0fd28a, type: 3}
       propertyPath: point1.x
@@ -3634,7 +3634,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5010281221870562033, guid: c7bbbd33ab91c4901a0360e9ac0fd28a, type: 3}
       propertyPath: numCoils
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 5010281221870562033, guid: c7bbbd33ab91c4901a0360e9ac0fd28a, type: 3}
       propertyPath: point1.x
