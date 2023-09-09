@@ -5318,7 +5318,7 @@ CanvasGroup:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 439528551}
   m_Enabled: 1
-  m_Alpha: 1
+  m_Alpha: 0
   m_Interactable: 0
   m_BlocksRaycasts: 0
   m_IgnoreParentGroups: 0
@@ -12547,7 +12547,7 @@ MonoBehaviour:
     visibleUI: {fileID: 0}
   - language: 1
     text: "En g\xE9n\xE9ral, le syst\xE8me ne se trouve pas exactement dans l'un
-      ou l'autre des modes normaux, mais plut\xF4t dans une <i>combinaison des deux</i>.
+      ou l'autre des modes propres, mais plut\xF4t dans une <i>combinaison des deux</i>.
       C'est ce qui donne lieu au comportement plus complexe que vous voyez ici."
     visibleUI: {fileID: 0}
 --- !u!114 &1257768318
@@ -12570,9 +12570,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "In general, the system will not be exactly in one or the other of the
-    normal modes, but instead a <i>combination of the two</i>. That\u2019s what gives
-    rise to the more complex behaviour you see here."
+  m_text: "En g\xE9n\xE9ral, le syst\xE8me ne se trouve pas exactement dans l'un
+    ou l'autre des modes propres, mais plut\xF4t dans une <i>combinaison des deux</i>.
+    C'est ce qui donne lieu au comportement plus complexe que vous voyez ici."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: ea838625e000443bb85ccb2eff18976f, type: 2}
   m_sharedMaterial: {fileID: 4303336837466598660, guid: ea838625e000443bb85ccb2eff18976f, type: 2}
@@ -12712,7 +12712,7 @@ MonoBehaviour:
       se d\xE9placent ensemble de mani\xE8re synchronis\xE9e. Remarquez que le <font-weight=\"700\"><color=#FF8E6A>ressort</color></font-weight>
       central ne s'\xE9tire pas et ne se comprime pas, et que chaque masse suit toujours
       le m\xEAme chemin. Nous appelons ce comportement particulier du syst\xE8me
-      le <i>premier mode normal</i>."
+      le <i>premier mode propre</i>."
     visibleUI: {fileID: 0}
 --- !u!114 &1581637438
 MonoBehaviour:
@@ -12734,10 +12734,11 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: One type of motion is like this, where the two <font-weight="700"><color=#5BABF1>masses</color></font-weight>
-    move together in sync. Notice how the middle <font-weight="700"><color=#FF8E6A>spring</color></font-weight>
-    doesn't stretch or compress, and each mass retraces its same path continuously.
-    This special behaviour of the system is called the <i>first normal mode</i>.
+  m_text: "Voici un type de mouvement, o\xF9 les deux <font-weight=\"700\"><color=#5BABF1>masses</color></font-weight>
+    se d\xE9placent ensemble de mani\xE8re synchronis\xE9e. Remarquez que le <font-weight=\"700\"><color=#FF8E6A>ressort</color></font-weight>
+    central ne s'\xE9tire pas et ne se comprime pas, et que chaque masse suit toujours
+    le m\xEAme chemin. Nous appelons ce comportement particulier du syst\xE8me le
+    <i>premier mode propre</i>."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: ea838625e000443bb85ccb2eff18976f, type: 2}
   m_sharedMaterial: {fileID: 4303336837466598660, guid: ea838625e000443bb85ccb2eff18976f, type: 2}
@@ -12990,7 +12991,7 @@ CanvasGroup:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1888485397}
   m_Enabled: 1
-  m_Alpha: 0
+  m_Alpha: 1
   m_Interactable: 0
   m_BlocksRaycasts: 0
   m_IgnoreParentGroups: 0
@@ -13062,7 +13063,7 @@ MonoBehaviour:
     text: What role do you think the <i>amplitudes</i> of the normal modes play?
     visibleUI: {fileID: 0}
   - language: 1
-    text: "Selon vous, quel r\xF4le jouent les <i>amplitudes</i> des modes normaux
+    text: "Selon vous, quel r\xF4le jouent les <i>amplitudes</i> des modes propres
       ?"
     visibleUI: {fileID: 0}
 --- !u!114 &1911665043
@@ -13085,7 +13086,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: What role do you think the <i>amplitudes</i> of the normal modes play?
+  m_text: "Selon vous, quel r\xF4le jouent les <i>amplitudes</i> des modes propres
+    ?"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: b0a43fe65966e4830b14e32656a09a81, type: 2}
   m_sharedMaterial: {fileID: 2994796600930771256, guid: b0a43fe65966e4830b14e32656a09a81, type: 2}
@@ -13377,7 +13379,7 @@ MonoBehaviour:
       and predictable way.
     visibleUI: {fileID: 0}
   - language: 1
-    text: "Il existe un <i>deuxi\xE8me mode normal</i> o\xF9 les <font-weight=\"700\"><color=#5BABF1>masses</color></font-weight>
+    text: "Il existe un <i>deuxi\xE8me mode propre</i> o\xF9 les <font-weight=\"700\"><color=#5BABF1>masses</color></font-weight>
       oscillent toujours ensemble, mais o\xF9 elles sont d\xE9synchronis\xE9es l'une
       par rapport \xE0 l'autre. Dans ce mode, les trois ressorts s'\xE9tirent et
       se compriment, mais toujours de mani\xE8re r\xE9p\xE9titive et pr\xE9visible."
@@ -13402,10 +13404,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: There is a <i>second normal mode</i> where the <font-weight="700"><color=#5BABF1>masses</color></font-weight>
-    still oscillate together, but instead they are out of sync with each other. Now
-    all three springs are stretching and compressing, though still in a repetitive
-    and predictable way.
+  m_text: "Il existe un <i>deuxi\xE8me mode propre</i> o\xF9 les <font-weight=\"700\"><color=#5BABF1>masses</color></font-weight>
+    oscillent toujours ensemble, mais o\xF9 elles sont d\xE9synchronis\xE9es l'une
+    par rapport \xE0 l'autre. Dans ce mode, les trois ressorts s'\xE9tirent et se
+    compriment, mais toujours de mani\xE8re r\xE9p\xE9titive et pr\xE9visible."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: ea838625e000443bb85ccb2eff18976f, type: 2}
   m_sharedMaterial: {fileID: 4303336837466598660, guid: ea838625e000443bb85ccb2eff18976f, type: 2}
