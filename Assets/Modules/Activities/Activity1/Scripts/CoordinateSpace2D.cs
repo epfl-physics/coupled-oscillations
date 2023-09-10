@@ -42,6 +42,9 @@ public class CoordinateSpace2D : MonoBehaviour, IPointerDownHandler, IPointerUpH
 
     private Camera eventCamera = null;
 
+    public static event System.Action<int> OnFoundNormalMode;
+    public static event System.Action OnPointerClick;
+
     private void Awake()
     {
         rect = GetComponent<RectTransform>();
@@ -84,6 +87,8 @@ public class CoordinateSpace2D : MonoBehaviour, IPointerDownHandler, IPointerUpH
         // Recompute exclusion border in UV space
         uvMax = ScaledToNormalizedPosition(new Vector2(xRange.y - borderWidth, yRange.y - borderWidth));
         uvMin = ScaledToNormalizedPosition(new Vector2(xRange.x + borderWidth, yRange.x + borderWidth));
+
+        OnPointerClick?.Invoke();
     }
 
     public void OnPointerUp(PointerEventData eventData)
@@ -108,12 +113,14 @@ public class CoordinateSpace2D : MonoBehaviour, IPointerDownHandler, IPointerUpH
             {
                 mode1.isOn = true;
                 if (diagonalMode1) diagonalMode1.gameObject.SetActive(true);
+                OnFoundNormalMode?.Invoke(1);
             }
 
             if (mode2 && CheckForMode2(uv, 0.0000001f))
             {
                 mode2.isOn = true;
                 if (diagonalMode2) diagonalMode2.gameObject.SetActive(true);
+                OnFoundNormalMode?.Invoke(2);
             }
         }
 
