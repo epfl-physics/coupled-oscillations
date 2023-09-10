@@ -63,6 +63,10 @@ public class CoupledOscillationsSimulation : Simulation
         plane = new Plane(Vector3.forward, Vector3.zero);
         mainCamera = Camera.main;
         massLayerMask = LayerMask.GetMask("Masses");
+
+        // Update appearance of springs
+        if (spring1) SetK1(spring1.k);
+        if (spring2) SetK2(spring2.k);
     }
 
     private void OnEnable()
@@ -350,7 +354,9 @@ public class CoupledOscillationsSimulation : Simulation
         if (spring1 && spring3)
         {
             spring1.k = value;
+            SetSpringThickness(spring1, value);
             spring3.k = value;
+            SetSpringThickness(spring3, value);
             UpdateCouplingConstants();
             if (IsPaused) UpdateSpringPositions();
             if (startFromRest)
@@ -366,6 +372,7 @@ public class CoupledOscillationsSimulation : Simulation
         if (spring2)
         {
             spring2.k = value;
+            SetSpringThickness(spring2, value);
             UpdateCouplingConstants();
             if (IsPaused) UpdateSpringPositions();
             if (startFromRest)
@@ -374,6 +381,12 @@ public class CoupledOscillationsSimulation : Simulation
                 UpdateXDot();
             }
         }
+    }
+
+    private void SetSpringThickness(Spring spring, float kValue)
+    {
+        spring.lineWidth = Mathf.Max(0.1f, 0.7f * Mathf.Log10(1 + kValue));
+        spring.Redraw();
     }
 
     public void SetMassInteractivity(bool interactive)
