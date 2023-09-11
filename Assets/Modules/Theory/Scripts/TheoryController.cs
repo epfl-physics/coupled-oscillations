@@ -50,6 +50,8 @@ public class TheoryController : MonoBehaviour
                 graph.CreateLine(x2Color, "X2");
                 graph.CreateLine(cmColor, "CM");
             }
+
+            sim.Reset(true);
         }
     }
 

@@ -40,6 +40,7 @@ public class UIController : MonoBehaviour
         if (sim)
         {
             sim.SetMass(RoundToDecimalPlace(mass, numDecimalDigits), pauseOnSliderChange);
+            sim.UpdateMassPositions();
             if (toggleGroup) sim.EnterNormalMode(currentMode == 1, amplitude);
         }
 

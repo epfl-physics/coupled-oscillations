@@ -12,7 +12,7 @@ public class MassiveObject : MonoBehaviour
 
     public void SetMass(float mass)
     {
-        transform.localScale = (1 + Mathf.Log10(Mathf.Max(0.1f, Mathf.Pow(mass, 0.33f)))) * Vector3.one;
+        transform.localScale = (1.5f + Mathf.Log10(Mathf.Max(0.1f, Mathf.Pow(mass, 0.33f)))) * Vector3.one;
         this.mass = mass;
     }
 
