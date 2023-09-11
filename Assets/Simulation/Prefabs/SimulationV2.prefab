@@ -2028,6 +2028,7 @@ MonoBehaviour:
   x1Wall: -5.6
   x2Wall: 5.6
   simState: {fileID: 0}
+  initializeFromSimState: 0
   massesAreDraggable: 0
   x1Range: {x: -1, y: 0}
   x2Range: {x: 1, y: 0}
@@ -2108,6 +2109,18 @@ PrefabInstance:
       propertyPath: mass
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4690991410356824719, guid: a6eb908d73ec344aca5e6f8e2605ef67, type: 3}
+      propertyPath: hotspot.x
+      value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 4690991410356824719, guid: a6eb908d73ec344aca5e6f8e2605ef67, type: 3}
+      propertyPath: hotspot.y
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4690991410356824719, guid: a6eb908d73ec344aca5e6f8e2605ef67, type: 3}
+      propertyPath: hoverCursor
+      value: 
+      objectReference: {fileID: 2800000, guid: e51b8a9ff80cc4ff79a1878bcc7819f8, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a6eb908d73ec344aca5e6f8e2605ef67, type: 3}
 --- !u!114 &4916071507573738725 stripped
@@ -2285,6 +2298,18 @@ PrefabInstance:
       propertyPath: mass
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4690991410356824719, guid: a6eb908d73ec344aca5e6f8e2605ef67, type: 3}
+      propertyPath: hotspot.x
+      value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 4690991410356824719, guid: a6eb908d73ec344aca5e6f8e2605ef67, type: 3}
+      propertyPath: hotspot.y
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4690991410356824719, guid: a6eb908d73ec344aca5e6f8e2605ef67, type: 3}
+      propertyPath: hoverCursor
+      value: 
+      objectReference: {fileID: 2800000, guid: e51b8a9ff80cc4ff79a1878bcc7819f8, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a6eb908d73ec344aca5e6f8e2605ef67, type: 3}
 --- !u!114 &4225442180899060322 stripped
