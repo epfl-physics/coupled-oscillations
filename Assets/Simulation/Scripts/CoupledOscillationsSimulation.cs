@@ -5,9 +5,9 @@ public class CoupledOscillationsSimulation : Simulation
     [Header("Objects")]
     [SerializeField] private MassiveObject mass1;
     [SerializeField] private MassiveObject mass2;
-    [SerializeField] private Spring spring1;
-    [SerializeField] private Spring spring2;
-    [SerializeField] private Spring spring3;
+    [SerializeField] private CustomSpring spring1;
+    [SerializeField] private CustomSpring spring2;
+    [SerializeField] private CustomSpring spring3;
     [SerializeField] private Transform wall1;
     [SerializeField] private Transform wall2;
 
@@ -18,7 +18,10 @@ public class CoupledOscillationsSimulation : Simulation
     [SerializeField] private double x2Ref = 2;
     [SerializeField] private float x1Wall = -5;
     [SerializeField] private float x2Wall = 5;
-    [SerializeField] private SimulationState simState;
+
+    [Header("Simulation State")]
+    [SerializeField] private CoupledOscillationsSimulationState simState;
+    [SerializeField] private bool initializeFromSimState;
 
     [Header("Interactivity")]
     [SerializeField] private bool massesAreDraggable;
@@ -28,7 +31,7 @@ public class CoupledOscillationsSimulation : Simulation
     private Plane plane;
     private Camera mainCamera;
     private Transform dragMass = null;
-    private Vector3 dragOffset = Vector3.zero;
+    // private Vector3 dragOffset = Vector3.zero;
 
     [Header("Buttons")]
     [SerializeField] private PlayButton playButton;
@@ -39,6 +42,8 @@ public class CoupledOscillationsSimulation : Simulation
     private double[] x;
     private double[] xdot;
     private double[][] constants;
+
+    private float yOffset = 0;
 
     private bool resumeOnMouseUp = false;
 
@@ -54,10 +59,15 @@ public class CoupledOscillationsSimulation : Simulation
         double[] a = ComputeAccelerations();
         xdot = new double[4] { 0, 0, a[0], a[1] };
 
+        // Determine the vertical offset of the system based on mass 1 size
+        if (mass1) yOffset = 0.5f * (mass1.transform.localScale.y - 2);
+
         // Initialize object positions
-        SetWallPositions();
+        UpdateWallPositions();
         UpdateMassPositions();
         UpdateSpringPositions();
+
+        SetMassInteractivity(massesAreDraggable);
 
         // For raycasting and dragging masses
         plane = new Plane(Vector3.forward, Vector3.zero);
@@ -65,10 +75,10 @@ public class CoupledOscillationsSimulation : Simulation
         massLayerMask = LayerMask.GetMask("Masses");
     }
 
-    private void OnEnable()
+    private void Start()
     {
         // Use ICs from simulation state if available
-        if (simState)
+        if (simState && initializeFromSimState)
         {
             for (int i = 0; i < x.Length; i++)
             {
@@ -76,6 +86,11 @@ public class CoupledOscillationsSimulation : Simulation
                 xdot[i] = simState.xdot[i];
             }
         }
+
+        // Make sure mass sizes and spring thicknesses are up to date
+        // if (mass1) SetMass(mass1.mass);
+        if (spring1) SetK1(spring1.k);
+        if (spring2) SetK2(spring2.k);
     }
 
     private void OnDisable()
@@ -104,8 +119,8 @@ public class CoupledOscillationsSimulation : Simulation
             if (Physics.Raycast(ray, out hitInfo, maxDistance, massLayerMask))
             {
                 dragMass = hitInfo.transform;
-                dragOffset = hitInfo.point - dragMass.position;
-                resumeOnMouseUp = !paused;
+                // dragOffset = hitInfo.point - dragMass.position;
+                resumeOnMouseUp = !IsPaused;
                 Pause();
             }
         }
@@ -128,6 +143,7 @@ public class CoupledOscillationsSimulation : Simulation
                     position.x = Mathf.Min(Mathf.Max(position.x, x2Range.x), x2Range.y);
                     UpdateX((float)x[0], position.x - (float)x2Ref);
                 }
+                position.y = yOffset;
                 dragMass.position = position;
                 UpdateSpringPositions();
 
@@ -149,7 +165,7 @@ public class CoupledOscillationsSimulation : Simulation
             UpdateSpringPositions();
 
             dragMass = null;
-            dragOffset = Vector3.zero;
+            // dragOffset = Vector3.zero;
 
             if (coordinateSpace) coordinateSpace.SetMarkerPositionFromX1X2(x[0], x[1]);
             if (resumeOnMouseUp) Resume();
@@ -159,7 +175,7 @@ public class CoupledOscillationsSimulation : Simulation
     // Solve the equations of motion
     private void FixedUpdate()
     {
-        if (paused) { return; }
+        if (IsPaused) { return; }
 
         int numSubsteps = 10;
         double deltaTime = Time.fixedDeltaTime / numSubsteps;
@@ -174,14 +190,26 @@ public class CoupledOscillationsSimulation : Simulation
 
     public void UpdateMassPositions()
     {
-        if (mass1) mass1.transform.position = (float)(x1Ref + x[0]) * Vector3.right;
-        if (mass2) mass2.transform.position = (float)(x2Ref + x[1]) * Vector3.right;
+        if (mass1) mass1.transform.position = new Vector3((float)(x1Ref + x[0]), yOffset, 0);
+        if (mass2) mass2.transform.position = new Vector3((float)(x2Ref + x[1]), yOffset, 0);
     }
 
-    private void SetWallPositions()
+    private void UpdateWallPositions()
     {
-        if (wall1) wall1.position = x1Wall * Vector3.right;
-        if (wall2) wall2.position = x2Wall * Vector3.right;
+        if (wall1)
+        {
+            Vector3 scale = wall1.localScale;
+            scale.y = 1 + 0.5f * yOffset;
+            wall1.localScale = scale;
+            wall1.position = new Vector3(x1Wall, 0.5f * yOffset, 0);
+        }
+        if (wall2)
+        {
+            Vector3 scale = wall2.localScale;
+            scale.y = 1 + 0.5f * yOffset;
+            wall2.localScale = scale;
+            wall2.position = new Vector3(x2Wall, 0.5f * yOffset, 0);
+        }
     }
 
     public void UpdateSpringPositions()
@@ -194,9 +222,11 @@ public class CoupledOscillationsSimulation : Simulation
         float offsetMass1 = mass1 ? mass1.HalfScale : 0;
         float offsetMass2 = mass2 ? mass2.HalfScale : 0;
 
-        if (spring1) spring1.SetEndpoints((x1Wall + offsetWall1) * Vector3.right, (x1 - offsetMass1) * Vector3.right);
-        if (spring2) spring2.SetEndpoints((x1 + offsetMass1) * Vector3.right, (x2 - offsetMass2) * Vector3.right);
-        if (spring3) spring3.SetEndpoints((x2 + offsetMass2) * Vector3.right, (x2Wall - offsetWall2) * Vector3.right);
+        Vector3 y = yOffset * Vector3.up;
+
+        if (spring1) spring1.SetEndpoints((x1Wall + offsetWall1) * Vector3.right + y, (x1 - offsetMass1) * Vector3.right + y);
+        if (spring2) spring2.SetEndpoints((x1 + offsetMass1) * Vector3.right + y, (x2 - offsetMass2) * Vector3.right + y);
+        if (spring3) spring3.SetEndpoints((x2 + offsetMass2) * Vector3.right + y, (x2Wall - offsetWall2) * Vector3.right + y);
     }
 
     private double[] ComputeAccelerations()
@@ -336,12 +366,15 @@ public class CoupledOscillationsSimulation : Simulation
             mass1.SetMass(value);
             mass2.SetMass(value);
             UpdateCouplingConstants();
-            if (paused) UpdateSpringPositions();
+            if (IsPaused) UpdateSpringPositions();
             if (startFromRest)
             {
                 UpdateX((float)x[0], (float)x[1]);
                 UpdateXDot();
             }
+
+            yOffset = 0.5f * (mass1.transform.localScale.y - 2);
+            UpdateWallPositions();
         }
     }
 
@@ -350,9 +383,11 @@ public class CoupledOscillationsSimulation : Simulation
         if (spring1 && spring3)
         {
             spring1.k = value;
+            SetSpringThickness(spring1, value);
             spring3.k = value;
+            SetSpringThickness(spring3, value);
             UpdateCouplingConstants();
-            if (paused) UpdateSpringPositions();
+            if (IsPaused) UpdateSpringPositions();
             if (startFromRest)
             {
                 UpdateX((float)x[0], (float)x[1]);
@@ -366,8 +401,9 @@ public class CoupledOscillationsSimulation : Simulation
         if (spring2)
         {
             spring2.k = value;
+            SetSpringThickness(spring2, value);
             UpdateCouplingConstants();
-            if (paused) UpdateSpringPositions();
+            if (IsPaused) UpdateSpringPositions();
             if (startFromRest)
             {
                 UpdateX((float)x[0], (float)x[1]);
@@ -376,8 +412,17 @@ public class CoupledOscillationsSimulation : Simulation
         }
     }
 
+    private void SetSpringThickness(CustomSpring spring, float kValue)
+    {
+        spring.lineWidth = Mathf.Max(0.1f, 0.7f * Mathf.Log10(1 + kValue));
+        spring.Redraw();
+    }
+
     public void SetMassInteractivity(bool interactive)
     {
+        if (mass1) mass1.SetInteractable(interactive);
+        if (mass2) mass2.SetInteractable(interactive);
+
         massesAreDraggable = interactive;
     }
 
@@ -399,7 +444,7 @@ public class CoupledOscillationsSimulation : Simulation
         xdot = new double[4] { 0, 0, a[0], a[1] };
 
         // Initialize object positions
-        SetWallPositions();
+        UpdateWallPositions();
         UpdateMassPositions();
         UpdateSpringPositions();
 
