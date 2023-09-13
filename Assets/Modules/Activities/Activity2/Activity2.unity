@@ -817,6 +817,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1734238677}
     m_Modifications:
+    - target: {fileID: 4852161584250708892, guid: 6a1f129935b6f489fb86702340482097, type: 3}
+      propertyPath: m_text
+      value: "Use the timer to experimentally verify the\n periods of the normal
+        modes"
+      objectReference: {fileID: 0}
     - target: {fileID: 4852161584250708894, guid: 6a1f129935b6f489fb86702340482097, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
