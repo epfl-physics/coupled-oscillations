@@ -1363,6 +1363,55 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 4852161584887105403, guid: 6a1f129935b6f489fb86702340482097, type: 3}
   m_PrefabInstance: {fileID: 751905961}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &763269697
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4641628281414885396, guid: c76fdaaa644f84aaf8e6e8bf1fec8745, type: 3}
+      propertyPath: m_Name
+      value: Confetti
+      objectReference: {fileID: 0}
+    - target: {fileID: 4641628281414885481, guid: c76fdaaa644f84aaf8e6e8bf1fec8745, type: 3}
+      propertyPath: m_RootOrder
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4641628281414885481, guid: c76fdaaa644f84aaf8e6e8bf1fec8745, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4641628281414885481, guid: c76fdaaa644f84aaf8e6e8bf1fec8745, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: 4641628281414885481, guid: c76fdaaa644f84aaf8e6e8bf1fec8745, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4641628281414885481, guid: c76fdaaa644f84aaf8e6e8bf1fec8745, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4641628281414885482, guid: c76fdaaa644f84aaf8e6e8bf1fec8745, type: 3}
+      propertyPath: ColorModule.gradient.maxGradient.ctime1
+      value: 26214
+      objectReference: {fileID: 0}
+    - target: {fileID: 4641628281414885482, guid: c76fdaaa644f84aaf8e6e8bf1fec8745, type: 3}
+      propertyPath: ColorModule.gradient.maxGradient.key1.b
+      value: 0.70980394
+      objectReference: {fileID: 0}
+    - target: {fileID: 4641628281414885482, guid: c76fdaaa644f84aaf8e6e8bf1fec8745, type: 3}
+      propertyPath: ColorModule.gradient.maxGradient.key1.g
+      value: 0.88235295
+      objectReference: {fileID: 0}
+    - target: {fileID: 4641628281414885482, guid: c76fdaaa644f84aaf8e6e8bf1fec8745, type: 3}
+      propertyPath: ColorModule.gradient.maxGradient.key1.r
+      value: 0.5137255
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: c76fdaaa644f84aaf8e6e8bf1fec8745, type: 3}
 --- !u!224 &794295067 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 6497445121244760969, guid: 57e8051eee0c64f9e953489952304d04, type: 3}
@@ -1670,6 +1719,7 @@ MonoBehaviour:
   mode1Feedback: {fileID: 1597155414}
   mode2Feedback: {fileID: 529463533}
   successBell: {fileID: 11400000, guid: 0903f1d34b1604f908ddccf8f74bdd48, type: 2}
+  confetti: {fileID: 1080730286}
 --- !u!82 &890595811
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1869,6 +1919,11 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!198 &1080730286 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 4641628281414885482, guid: c76fdaaa644f84aaf8e6e8bf1fec8745, type: 3}
+  m_PrefabInstance: {fileID: 763269697}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1201654069
 GameObject:
   m_ObjectHideFlags: 0

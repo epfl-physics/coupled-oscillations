@@ -281,12 +281,12 @@ MonoBehaviour:
       in terms of only <i>two basic types of motion</i>.'
     visibleUI: {fileID: 0}
   - language: 1
-    text: "Prenons ce syst\xE8me : un <font-weight=\"700\"><color=#FF8E6A>ressort</color></font-weight>
+    text: "Consid\xE9rons un <font-weight=\"700\"><color=#FF8E6A>ressort</color></font-weight>
       reliant deux <font-weight=\"700\"><color=#5BABF1>masses</color></font-weight>
       identiques, chacune d'entre elles \xE9tant reli\xE9e \xE0 un <font-weight=\"700\"><color=#808080>mur</color></font-weight>
       fixe par un autre <font-weight=\"700\"><color=#83E1B5>ressort</color></font-weight>.
       Bien qu'au d\xE9but les oscillations semblent assez complexes, le comportement
-      peut \xEAtre compris en termes de seulement <i>deux types de mouvement de base</i>."
+      peut \xEAtre compris en termes de seulement <i>deux types de mouvement fondamentaux</i>."
     visibleUI: {fileID: 0}
 --- !u!114 &166921580
 MonoBehaviour:
@@ -555,7 +555,7 @@ MonoBehaviour:
   moveTime: 1
   targetColor: {r: 1, g: 1, b: 1, a: 1}
   colorTransitionTime: 1
-  cameraTransform: {fileID: 0}
+  cameraTransform: {fileID: 465849219}
 --- !u!225 &439528555
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -732,7 +732,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 465849216}
-  m_LocalRotation: {x: 0.056692794, y: 0, z: 0, w: 0.99839175}
+  m_LocalRotation: {x: 0.056692787, y: 0, z: 0, w: 0.9983917}
   m_LocalPosition: {x: 0, y: 0.5, z: -14.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -1454,13 +1454,13 @@ MonoBehaviour:
   tmp: {fileID: 1257768318}
   textData:
   - language: 0
-    text: "In general, the system will not be exactly in one or the other of the
-      normal modes, but instead a <i>combination of the two</i>. That\u2019s what
-      gives rise to the more complex behaviour you see here."
+    text: "In general, the system will not be exactly in one of these normal modes,
+      but instead a <i>combination of the two</i>. That\u2019s what gives rise to
+      the more complex behaviour you see here."
     visibleUI: {fileID: 0}
   - language: 1
     text: "En g\xE9n\xE9ral, le syst\xE8me ne se trouve pas exactement dans l'un
-      ou l'autre des modes propres, mais plut\xF4t dans une <i>combinaison des deux</i>.
+      de ces modes propres, mais plut\xF4t dans une <i>combinaison des deux</i>.
       C'est ce qui donne lieu au comportement plus complexe que vous voyez ici."
     visibleUI: {fileID: 0}
 --- !u!114 &1257768318
@@ -1483,9 +1483,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "En g\xE9n\xE9ral, le syst\xE8me ne se trouve pas exactement dans l'un
-    ou l'autre des modes propres, mais plut\xF4t dans une <i>combinaison des deux</i>.
-    C'est ce qui donne lieu au comportement plus complexe que vous voyez ici."
+  m_text: "In general, the system will not be exactly in one of these normal modes,
+    but instead a <i>combination of the two</i>. That\u2019s what gives rise to the
+    more complex behaviour you see here."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: ea838625e000443bb85ccb2eff18976f, type: 2}
   m_sharedMaterial: {fileID: 4303336837466598660, guid: ea838625e000443bb85ccb2eff18976f, type: 2}
@@ -1615,17 +1615,18 @@ MonoBehaviour:
   tmp: {fileID: 1581637438}
   textData:
   - language: 0
-    text: One type of motion is like this, where the two <font-weight="700"><color=#5BABF1>masses</color></font-weight>
-      move together in sync. Notice how the middle <font-weight="700"><color=#FF8E6A>spring</color></font-weight>
-      doesn't stretch or compress, and each mass retraces its same path continuously.
-      This special behaviour of the system is called the <i>first normal mode</i>.
+    text: The first type of motion is like this, where the two <font-weight="700"><color=#5BABF1>masses</color></font-weight>
+      move together in sync. The middle <font-weight="700"><color=#FF8E6A>spring</color></font-weight>
+      doesn't stretch or compress. The two masses have the same velocity at all times
+      (symmetric). This special behaviour of the system is called the <i>first normal
+      mode</i>.
     visibleUI: {fileID: 0}
   - language: 1
-    text: "Voici un type de mouvement, o\xF9 les deux <font-weight=\"700\"><color=#5BABF1>masses</color></font-weight>
-      se d\xE9placent ensemble de mani\xE8re synchronis\xE9e. Remarquez que le <font-weight=\"700\"><color=#FF8E6A>ressort</color></font-weight>
-      central ne s'\xE9tire pas et ne se comprime pas, et que chaque masse suit toujours
-      le m\xEAme chemin. Nous appelons ce comportement particulier du syst\xE8me
-      le <i>premier mode propre</i>."
+    text: "Voici le premier type de mouvement, o\xF9 les deux <font-weight=\"700\"><color=#5BABF1>masses</color></font-weight>
+      se d\xE9placent ensemble de mani\xE8re synchronis\xE9e. Le <font-weight=\"700\"><color=#FF8E6A>ressort</color></font-weight>
+      central ne s'\xE9tire pas et ne se comprime pas. Les deux masses ont la m\xEAme
+      vitesse en tout temps (sym\xE9trique). Nous appelons ce comportement particulier
+      du syst\xE8me le <i>premier mode propre</i>."
     visibleUI: {fileID: 0}
 --- !u!114 &1581637438
 MonoBehaviour:
@@ -1647,11 +1648,11 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Voici un type de mouvement, o\xF9 les deux <font-weight=\"700\"><color=#5BABF1>masses</color></font-weight>
-    se d\xE9placent ensemble de mani\xE8re synchronis\xE9e. Remarquez que le <font-weight=\"700\"><color=#FF8E6A>ressort</color></font-weight>
-    central ne s'\xE9tire pas et ne se comprime pas, et que chaque masse suit toujours
-    le m\xEAme chemin. Nous appelons ce comportement particulier du syst\xE8me le
-    <i>premier mode propre</i>."
+  m_text: The first type of motion is like this, where the two <font-weight="700"><color=#5BABF1>masses</color></font-weight>
+    move together in sync. The middle <font-weight="700"><color=#FF8E6A>spring</color></font-weight>
+    doesn't stretch or compress. The two masses have the same velocity at all times
+    (symmetric). This special behaviour of the system is called the <i>first normal
+    mode</i>.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: ea838625e000443bb85ccb2eff18976f, type: 2}
   m_sharedMaterial: {fileID: 4303336837466598660, guid: ea838625e000443bb85ccb2eff18976f, type: 2}
@@ -1799,7 +1800,7 @@ MonoBehaviour:
   moveTime: 1
   targetColor: {r: 1, g: 1, b: 1, a: 1}
   colorTransitionTime: 1
-  cameraTransform: {fileID: 0}
+  cameraTransform: {fileID: 465849219}
 --- !u!225 &1687472249
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -1904,7 +1905,7 @@ CanvasGroup:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1888485397}
   m_Enabled: 1
-  m_Alpha: 1
+  m_Alpha: 0.94
   m_Interactable: 0
   m_BlocksRaycasts: 0
   m_IgnoreParentGroups: 0
@@ -2288,13 +2289,15 @@ MonoBehaviour:
   - language: 0
     text: There is a <i>second normal mode</i> where the <font-weight="700"><color=#5BABF1>masses</color></font-weight>
       still oscillate together, but instead they are out of sync with each other.
-      Now all three springs are stretching and compressing, though still in a repetitive
+      The two masses have opposite velocities at all times (antisymmetric). Now all
+      three springs are stretching and compressing, though still in a repetitive
       and predictable way.
     visibleUI: {fileID: 0}
   - language: 1
     text: "Il existe un <i>deuxi\xE8me mode propre</i> o\xF9 les <font-weight=\"700\"><color=#5BABF1>masses</color></font-weight>
       oscillent toujours ensemble, mais o\xF9 elles sont d\xE9synchronis\xE9es l'une
-      par rapport \xE0 l'autre. Dans ce mode, les trois ressorts s'\xE9tirent et
+      par rapport \xE0 l'autre. Les deux masses ont une vitesse oppos\xE9e en tout
+      temps (antisym\xE9trique). Dans ce mode, les trois ressorts s'\xE9tirent et
       se compriment, mais toujours de mani\xE8re r\xE9p\xE9titive et pr\xE9visible."
     visibleUI: {fileID: 0}
 --- !u!114 &1983830645
@@ -2317,10 +2320,11 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Il existe un <i>deuxi\xE8me mode propre</i> o\xF9 les <font-weight=\"700\"><color=#5BABF1>masses</color></font-weight>
-    oscillent toujours ensemble, mais o\xF9 elles sont d\xE9synchronis\xE9es l'une
-    par rapport \xE0 l'autre. Dans ce mode, les trois ressorts s'\xE9tirent et se
-    compriment, mais toujours de mani\xE8re r\xE9p\xE9titive et pr\xE9visible."
+  m_text: There is a <i>second normal mode</i> where the <font-weight="700"><color=#5BABF1>masses</color></font-weight>
+    still oscillate together, but instead they are out of sync with each other. The
+    two masses have opposite velocities at all times (antisymmetric). Now all three
+    springs are stretching and compressing, though still in a repetitive and predictable
+    way.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: ea838625e000443bb85ccb2eff18976f, type: 2}
   m_sharedMaterial: {fileID: 4303336837466598660, guid: ea838625e000443bb85ccb2eff18976f, type: 2}

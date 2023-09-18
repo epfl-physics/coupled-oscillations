@@ -3328,7 +3328,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 08b2a45a11c9d412780419995f9f09d8, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 88a181db8d4d0404381df41fba4b2424, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -3935,7 +3935,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &613414251
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4067,8 +4067,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 161.5, y: 34.5}
-  m_SizeDelta: {x: 48, y: 72}
+  m_AnchoredPosition: {x: 161.5, y: 33.4}
+  m_SizeDelta: {x: 56, y: 64}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &634022969
 MonoBehaviour:
@@ -4090,7 +4090,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: ae66116ee1b4f40ddbd7f794a335c0a5, type: 3}
+  m_Sprite: {fileID: 21300000, guid: c0bf6314395bd46d6bfc1f1b44622d4b, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -5234,8 +5234,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 117.54, y: 34.5}
-  m_SizeDelta: {x: 48, y: 72}
+  m_AnchoredPosition: {x: 119.2, y: 33.4}
+  m_SizeDelta: {x: 56, y: 64}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &925838626
 MonoBehaviour:
@@ -5257,7 +5257,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: ae66116ee1b4f40ddbd7f794a335c0a5, type: 3}
+  m_Sprite: {fileID: 21300000, guid: c0bf6314395bd46d6bfc1f1b44622d4b, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -6097,7 +6097,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 08b2a45a11c9d412780419995f9f09d8, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 88a181db8d4d0404381df41fba4b2424, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -6317,7 +6317,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1230519796
 RectTransform:
   m_ObjectHideFlags: 0
@@ -8297,7 +8297,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5703257355305875093, guid: d460aa25934274b49adcdff1c97dd1f4, type: 3}
       propertyPath: textData.Array.data[1].text
-      value: Vecteurs force
+      value: Vecteurs forces
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d460aa25934274b49adcdff1c97dd1f4, type: 3}
@@ -10708,11 +10708,12 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\u2022 The weight and normal forces balance each other out.\n\u2022 Friction
-    is negligible.\n\u2022 Hooke's law holds for each spring:                    
-    , where     is \n  the spring displacement.\n\u2022 All three springs are massless
-    and have identical rest lengths <color=#ffffff00>l_0</color>.\n\u2022 The motion
-    is rectilinear."
+  m_text: "\u2022 Les poids et les forces de r\xE9action normales se compensent.\n\u2022
+    Les frottements sont n\xE9glig\xE9s.\n\u2022 La loi de Hooke s'applique \xE0
+    chaque ressort :                    , o\xF9      \n  repr\xE9sente le vecteur
+    d\xE9placement du ressort.\n\u2022 Les trois ressorts sont sans masse et ont
+    des longueurs de repos \n   identiques <color=#ffffff00>l_0</color>.\n\u2022
+    Le mouvement est rectiligne."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: ea838625e000443bb85ccb2eff18976f, type: 2}
   m_sharedMaterial: {fileID: 4303336837466598660, guid: ea838625e000443bb85ccb2eff18976f, type: 2}
@@ -10838,17 +10839,17 @@ MonoBehaviour:
   - language: 0
     text: "\u2022 The weight and normal forces balance each other out.\n\u2022 Friction
       is negligible.\n\u2022 Hooke's law holds for each spring:                    
-      , where     is \n  the spring displacement.\n\u2022 All three springs are massless
-      and have identical rest lengths <color=#ffffff00>l_0</color>.\n\u2022 The motion
-      is rectilinear."
+      , where     is \n  the spring vector displacement.\n\u2022 All three springs
+      are massless and have identical rest lengths <color=#ffffff00>l_0</color>.\n\u2022
+      The motion is rectilinear."
     visibleUI: {fileID: 1230519796}
   - language: 1
     text: "\u2022 Les poids et les forces de r\xE9action normales se compensent.\n\u2022
       Les frottements sont n\xE9glig\xE9s.\n\u2022 La loi de Hooke s'applique \xE0
-      chaque ressort :                    , o\xF9      \n  repr\xE9sente le d\xE9placement
-      du ressort.\n\u2022 Les trois ressorts sont sans masse et ont des longueurs
-      de repos \n   identiques <color=#ffffff00>l_0</color>.\n\u2022 Le mouvement
-      est rectiligne."
+      chaque ressort :                    , o\xF9      \n  repr\xE9sente le vecteur
+      d\xE9placement du ressort.\n\u2022 Les trois ressorts sont sans masse et ont
+      des longueurs de repos \n   identiques <color=#ffffff00>l_0</color>.\n\u2022
+      Le mouvement est rectiligne."
     visibleUI: {fileID: 613414251}
 --- !u!222 &878037621435336799
 CanvasRenderer:

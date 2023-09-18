@@ -6,6 +6,7 @@ public class Activity1Feedback : MonoBehaviour
     [SerializeField] private CanvasGroup mode1Feedback;
     [SerializeField] private CanvasGroup mode2Feedback;
     [SerializeField] private SoundEffect successBell;
+    [SerializeField] private ParticleSystem confetti;
 
     private Image background;
     private AudioSource audioSource;
@@ -35,11 +36,13 @@ public class Activity1Feedback : MonoBehaviour
         if (mode1Feedback) mode1Feedback.alpha = 0;
         if (mode2Feedback) mode2Feedback.alpha = 0;
         SetBackgroundVisibility(false);
+        SetConfettiVisibility(false);
     }
 
     public void HandleNormalModeFound(int modeNumber)
     {
         SetBackgroundVisibility(true);
+        SetConfettiVisibility(true);
 
         if (successBell && audioSource && volumeIsOn) successBell.Play(audioSource);
 
@@ -61,6 +64,11 @@ public class Activity1Feedback : MonoBehaviour
     private void SetBackgroundVisibility(bool isVisible)
     {
         if (background) background.enabled = isVisible;
+    }
+
+    private void SetConfettiVisibility(bool isVisible)
+    {
+        if (confetti) confetti.gameObject.SetActive(isVisible);
     }
 
     public void ToggleVolume(bool isOn)
