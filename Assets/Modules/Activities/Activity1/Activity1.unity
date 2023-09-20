@@ -415,7 +415,7 @@ MonoBehaviour:
     text: Antisymmetric
     visibleUI: {fileID: 0}
   - language: 1
-    text: "Antisymm\xE9trique"
+    text: "Antisym\xE9trique"
     visibleUI: {fileID: 0}
 --- !u!114 &244165719
 MonoBehaviour:
@@ -1546,7 +1546,7 @@ MonoBehaviour:
     text: Symmetric
     visibleUI: {fileID: 0}
   - language: 1
-    text: "Symm\xE9trique"
+    text: "Sym\xE9trique"
     visibleUI: {fileID: 0}
 --- !u!114 &837153624
 MonoBehaviour:
