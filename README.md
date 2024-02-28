@@ -1,1 +1,1 @@
-#coupled-oscillations
+# Coupled Oscillations
